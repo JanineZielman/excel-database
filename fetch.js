@@ -1,4 +1,9 @@
 async function fetchText() {
+    var url = document.URL;
+    var id = url.substring(url.lastIndexOf('/') + 1);
+
+    console.log(id)
+
     let response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQgeBFLmTRMPQdzc2CCh7_Z7ljVImEH0OkaJ-i1A0IEwGeAKKoVFFY_NRM3mJuZC3Ewzm6I3QGmJI6f/pubhtml');
 
     if (response.status === 200) {
@@ -6,8 +11,6 @@ async function fetchText() {
       let container = document.querySelector('.container');
       container.innerHTML = data;
       const tables = document.querySelectorAll("table");
-      const rows = document.querySelectorAll("tr");
-      // console.log(tables)
       for (let t = 0; t < tables.length; t++) { 
         const wrapper = document.createElement("div");
         wrapper.classList.add("wrapper");
@@ -15,7 +18,6 @@ async function fetchText() {
         document.body.appendChild(wrapper);
         for (let i = 0; i < tables[t].children[1].children.length; i++) {
           for (let j = 1; j < tables[t].children[1].children[i].cells.length; j++) {
-            console.log(tables[t].children[1].children[i].cells[j].innerHTML)
             const newDiv = document.createElement("div");
             if (j == 1 && i == 0){
               newDiv.classList.add("name");
@@ -40,6 +42,7 @@ async function fetchText() {
           }
         }
       }
+      window.location.href = id;
     }
 }
 
