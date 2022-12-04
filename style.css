@@ -1,0 +1,63 @@
+body{
+	font-family: helvetica;
+	font-size: 18px;
+}
+
+.container{
+	display: none;
+}
+
+.name{
+	font-size: 24px;
+}
+
+.hidden{
+	display: none;
+}
+
+.wrapper{
+	min-height: 100vh;
+	border-bottom: 1px solid black;
+}
+
+.name, .class{
+	display: inline-block;
+	padding-bottom: 14px;
+}
+
+.class{
+	width: 20%;
+	text-align: right;
+	vertical-align: top;
+	margin-top: 28px;
+}
+
+.name{
+	font-size: 36px;
+	width: 75%;
+	padding-top: 14px;
+}
+
+.subject{
+	background-color: black;
+	color: white;
+	padding: 5px 14px;
+	border-radius: 25px;
+	width: auto;
+	font-size: 14px;
+	width: fit-content;
+	margin: 20px 0 0 auto;
+	margin-bottom: -24px;
+}
+
+.title{
+	font-size: 24px;
+	line-height: 1.5;
+	width: 60%;
+	mar
+}
+
+.description{
+	padding-bottom: 24px;
+	border-bottom: 1px solid black;
+}
