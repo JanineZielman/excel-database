@@ -20,6 +20,7 @@ async function fetchText() {
           for (let j = 1; j < tables[t].children[1].children[i].cells.length; j++) {
             const newDiv = document.createElement("div");
             const header = document.createElement("div");
+            
             if (j == 1 && i == 0){
               header.innerHTML = `<div class="name">${tables[t].children[1].children[0].cells[1].innerHTML}</div> <div class="class">${tables[t].children[1].children[0].cells[2].innerHTML}</div>`;             
             }
