@@ -2,7 +2,7 @@ async function fetchText() {
     var url = document.URL;
     var id = url.substring(url.lastIndexOf('/') + 1);
 
-    let response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQknA1CbjyGoHk9vO-gpbzN372kPHRI5kyphqeHtm_yYmnEb6fydaHYnRNAFnRhrlUiYvE2jKEZupU8/pubhtml');
+    let response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vRWsBOK-npgZrutsik2z93CGSkZMH0kyL9_QGhJLwBy0xbdvWbB121xQMkrK1D_mCv6T8TEtsG79gi8/pubhtml');
 
     if (response.status === 200) {
       let data = await response.text();
