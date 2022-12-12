@@ -1,9 +1,4 @@
 async function fetchText() {
-    var url = document.URL;
-    var id = url.substring(url.lastIndexOf('/') + 1);
-
-    console.log(id)
-
     let response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vRWsBOK-npgZrutsik2z93CGSkZMH0kyL9_QGhJLwBy0xbdvWbB121xQMkrK1D_mCv6T8TEtsG79gi8/pubhtml');
 
     if (response.status === 200) {

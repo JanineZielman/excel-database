@@ -43,7 +43,7 @@ async function fetchText() {
           }
         }
       }
-      if (id){
+      if (id?.includes('#')){
         window.location.href = id;
       }
     }

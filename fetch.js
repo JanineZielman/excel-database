@@ -2,8 +2,6 @@ async function fetchText() {
     var url = document.URL;
     var id = url.substring(url.lastIndexOf('/') + 1);
 
-    console.log(id)
-
     let response = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vQgeBFLmTRMPQdzc2CCh7_Z7ljVImEH0OkaJ-i1A0IEwGeAKKoVFFY_NRM3mJuZC3Ewzm6I3QGmJI6f/pubhtml');
 
     if (response.status === 200) {
@@ -51,7 +49,7 @@ async function fetchText() {
           }
         }
       }
-      if (id){
+      if (id?.includes('#')){
         window.location.href = id;
       }
     }
