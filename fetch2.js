@@ -12,7 +12,7 @@ async function fetchText() {
       for (let t = 0; t < tables.length; t++) { 
         const wrapper = document.createElement("div");
         wrapper.classList.add("wrapper");
-        wrapper.setAttribute('id', tables[t].children[1].children[0].cells[1].innerHTML.replaceAll(' ', '_'));
+        wrapper.setAttribute('id', tables[t].children[1].children[0].cells[1].innerHTML.replaceAll(' ', '_').slice(0, 15));
         document.body.appendChild(wrapper);
         for (let i = 0; i < tables[t].children[1].children.length; i++) {
           for (let j = 1; j < tables[t].children[1].children[i].cells.length; j++) {
